@@ -7,10 +7,19 @@ module.exports = {
     devtool: 'cheap-module-eval-source-map',
     entry: path.resolve(__dirname, 'src', 'index'),
     output: {
-        filename: 'index.js',
         path: path.resolve(__dirname, 'lib'),
-        publicPath: '/'
+        filename: 'index.js',
+        libraryTarget: 'umd',
+        library: 'gje-claim-chat'
     },
+    externals: [{
+        react: {
+            root: 'React',
+            commonjs2: 'react',
+            commonjs: 'react',
+            amd: 'react'
+        }
+    }],
     resolve: {
         extensions: ['.js', '.jsx']
     },

@@ -7,8 +7,8 @@ const app = express();
 const compiler = webpack(config);
 const port = 3001;
 
-const DIST_DIR = path.join(__dirname, "dist");
-const HTML_FILE     = path.join(DIST_DIR, "example.html");
+const DIST_DIR = path.join(__dirname, "lib");
+const HTML_FILE     = path.join(DIST_DIR, "index.html");
 
 app.use(
   require('webpack-dev-middleware')(compiler, {
@@ -36,6 +36,5 @@ app.listen(port, (error) => {
     console.error(error);
   } else {
     console.info('Listening on port %s. Open up http://localhost:%s/ in your browser.', port, port);
-    console.info("Waiting for claim handler message:");
   }
 });

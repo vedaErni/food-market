@@ -1,0 +1,23 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 6
+  },
+  "plugins": [
+    "react"
+  ],
+  "extends": ["airbnb", "eslint-config-prettier"],
+  "rules": {
+    "comma-dangle": ["error", "never"],
+    "linebreak-style": 0,
+    "no-undef": 0, // Not necessary if downgrading eslint to v3
+    "require-default-props":0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+  }
+}

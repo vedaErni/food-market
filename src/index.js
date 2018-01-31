@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {FoodDashboard} from './components/FoodDashboard';
+import { BrowserRouter } from 'react-router-dom'
+import App from './components/App';
+import styles from './styles/index.less';
 
-ReactDOM.render(<FoodDashboard />, document.getElementById('root'));
+ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, document.getElementById('root'));
